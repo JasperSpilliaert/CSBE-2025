@@ -29,7 +29,9 @@ Knowing the first letters are CSC we can map
 CSC in morse code: -.-. ... -.-.
 
 FEIHLGEEKJHFDK
+
 AGJDCDEGBADJGC
+
 -.-. ... -.-.
 
 dashes replacement: fijfa
