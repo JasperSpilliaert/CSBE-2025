@@ -26,22 +26,25 @@ Then I saw I got the first 2 cracked
 
 I quickly made a script to make a wordlist with only numbers till 999
 
-![](./Resources/numbers.py)
+![numbers.py](./Resources/numbers.py)
 
 plus a script to bruteforce with john (ChatGPT xp):
 
-![](./Resources/zip.py)
+![zip.py](./Resources/zip.py)
 
 I quickly got the next few:
 
+```
 2.zip: 251 -> C
 3.zip: 31591 -> { 
 4.zip: 10862713 -> O 
+```
 
 We let it run for some time for the next one but it didn't come quickly. We moved on but knew there was some sort of pattern
 
 Then the next morning we put it in here https://oeis.org/ and got the solution directly :
 
+```
 5.zip: 14467532003 -> E
 6.zip: 31797494201591 -> I
 7.zip: 156248170093443583 -> S
@@ -56,6 +59,7 @@ Then the next morning we put it in here https://oeis.org/ and got the solution d
 16.zip: 40659014544749437043977893440134416866913234596211623386661 -> I
 17.zip: 8350542359607778288560184757448232740362339786695496947100866519 -> 3
 18.zip: 1895421563785307091692560351018414917406309718462035628632253986992139 -> }
+```
 
 ## Solve script
 
