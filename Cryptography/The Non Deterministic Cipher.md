@@ -28,15 +28,17 @@ Knowing the first letters are CSC we can map
 
 CSC in morse code: -.-. ... -.-.
 
+Put it under each other
+
+```
 FEIHLGEEKJHFDK
-
 AGJDCDEGBADJGC
-
 -.-. ... -.-.
+```
 
-dashes replacement: fijfa
-dots replacement: ehghd
-space replacement: lkbc
+- dashes replacement: fijfa
+- dots replacement: ehghd
+- space replacement: lkbc
 
 ![](./Resources/solved.png)
 
