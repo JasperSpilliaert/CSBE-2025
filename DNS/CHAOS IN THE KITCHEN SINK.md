@@ -57,7 +57,7 @@ flag.dishes.be.         300     CH      SINK    40 0 0 Q1NDe05vTW9yZURpcnR5RGlza
 
 go to [https://cyberchef.org](https://cyberchef.org):
 
-Q1NDe05vTW9yZURpcnR5RGlzaGVzSW5UaGVLaXRjaGVuU0lOS30= to Base64 -> CSC{NoMoreDirtyDishesInTheKitchenSINK}
+Q1NDe05vTW9yZURpcnR5RGlzaGVzSW5UaGVLaXRjaGVuU0lOS30= from Base64 -> CSC{NoMoreDirtyDishesInTheKitchenSINK}
 
 ## Solve script
 `Resources/PRNG_AES.py`
