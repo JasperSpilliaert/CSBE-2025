@@ -37,13 +37,15 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 WARNING: One or more files failed to extract: either no utility was found or it's unimplemented
 ```
 
-Now we go in to the extrected file and we see the following:
+Now we go in to the extracted file and we see the following:
 
 We see a note (Note.txt):
 
+```
 You're sharper than this bloody Peter Pan ! But the treasure be still hidden deep mate ! Aye, the X marks the spot, but the island is full of crocodiles ready to devour you. 
 
 Only under the moonlight does the true path reveal itself.
+```
 
 And there's also a treasure map png:
 
