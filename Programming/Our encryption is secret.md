@@ -22,7 +22,7 @@ I first tried to crack just using /usr/share/worlists/rockyou.txt
 Then I saw I got the first 2 cracked
 
 0.zip: 1 -> C
-1.zip: 8 -> S
+1.zip: 9 -> S
 
 I quickly made a script to make a wordlist with only numbers till 999
 
