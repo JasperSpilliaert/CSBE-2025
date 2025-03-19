@@ -60,10 +60,10 @@ go to [https://cyberchef.org](https://cyberchef.org):
 Q1NDe05vTW9yZURpcnR5RGlzaGVzSW5UaGVLaXRjaGVuU0lOS30= from Base64 -> CSC{NoMoreDirtyDishesInTheKitchenSINK}
 
 ## Solve script
-`Resources/PRNG_AES.py`
+/
 
 ## Flag
-`CSC{Th1s_k3Y_W34_34sY_T0_Br34k}`
+`CSC{NoMoreDirtyDishesInTheKitchenSINK}`
 
 
 
