@@ -110,6 +110,42 @@ vector::_M_realloc_insert
 Inspect the code in IDA
 Decompile it to C++
 
+From that decompiled code, the program literally checks whether your input (argv[1]) is:
+
+1. Exactly 74 characters long,
+
+``` C++
+v145 = std::__cxx11::basic_string<char>::length(v159);
+if ( v145 == 74 ) {
+  std::cout << "SIZE IS OK. LET DECRYPT THIS NOW..." << std::endl;
+  // ...
+} else {
+  // "Too short" or "Too long"
+}
+```
+
+2. Exactly equal to the 10th string (index 9) in that big vector of hex values,
+
+
+``` C++
+v82 = std::vector::operator[](v147, 9LL);
+if ( stringCmp(v159, v82) )  // v159 = your input
+{
+    // => "ERROR DETECTED..."
+} 
+else 
+{
+    // => do the XOR chain and print result
+}
+```
+
+and only then it proceeds to do all those XOR calls. If it does not match that particular string, you see “ERROR DETECTED...” or “This is not the secret key.”
+
+
+So the input key must match v82, i.e. the string at index 9.
+
+Which is the following string: 0d6e6f603981b83b766d1f73ba95a868ed4100a9838b9230605e47355a7027dcd8ae729277
+
 ```
 ┌──(osboxes㉿osboxes)-[~/Desktop]
 └─$ ./xplorer_prog 0d6e6f603981b83b766d1f73ba95a868ed4100a9838b9230605e47355a7027dcd8ae729277
